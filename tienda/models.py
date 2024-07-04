@@ -38,7 +38,7 @@ class Venta(models.Model):
     apellido_inv = models.CharField(max_length=150, blank=True)
     telefono_inv = models.CharField(max_length=150, blank=True)
     fecha_venta = models.DateField(auto_now_add=True)
-    precio_total = models.DecimalField(max_digits=10, decimal_places=3, default= 0.0)
+    precio_total = models.DecimalField(max_digits=10, decimal_places=3, default= False)
     venta_procesada = models.BooleanField(default = False)
     venta_finalizada = models.BooleanField(default = False)
 

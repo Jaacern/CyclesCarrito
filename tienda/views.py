@@ -267,7 +267,7 @@ def tienda(request, param_int=0, param_str=None):
                 # Obtengo elprecio del producto        
                 prd_elegido = Producto.objects.filter(nombre_prd= str(infoFormulario['producto']))
                 # Calculo el precio de lo que compro el usuario.
-                precio_final = (infoFormulario['cantidad']/100.00)*float(prd_elegido[0].precio)
+                precio_final = (infoFormulario['cantidad'])*float(prd_elegido[0].precio)*0.9
                 
                 # llama a la funcion que agrega los productos a la DB
                 realizar_compra(dato_usuario,precio_final,infoFormulario)
@@ -301,7 +301,7 @@ def tienda(request, param_int=0, param_str=None):
                 # Obtengo elprecio del producto        
                 prd_elegido = Producto.objects.filter(nombre_prd= str(infoFormulario['producto']))
                 # Calculo el precio de lo que compro el usuario.
-                precio_final = (infoFormulario['cantidad']/100.00)*float(prd_elegido[0].precio)
+                precio_final = (infoFormulario['cantidad'])*float(prd_elegido[0].precio)*0.9
                 
                 # llama a la funcion que agrega los productos a la DB
                 realizar_compra_invitado(dato_usuario, precio_final, infoFormulario)

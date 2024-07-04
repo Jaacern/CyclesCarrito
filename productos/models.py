@@ -16,10 +16,10 @@ class Producto(models.Model):
     """
     nombre_prd = models.CharField(max_length=30, verbose_name="Nombre Producto")
     descripcion = models.TextField(default='Descripción no disponible')
-    precio = models.DecimalField(max_digits=10, decimal_places=2)
+    precio = models.DecimalField(max_digits=10, decimal_places=3)
     id_categoria = models.ForeignKey('Categoria_prod', on_delete=models.CASCADE, verbose_name="Categoria")
     imagen_prd = models.ImageField(upload_to = 'productos', blank=True)
-    costo = models.DecimalField(max_digits=10, decimal_places=2, blank=True, default=0.0)
+    costo = models.DecimalField(max_digits=10, decimal_places=3,default=0.0)
 
     class Meta:
 
